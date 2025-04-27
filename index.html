@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0"/>
+    
+    <title>CryptoMining</title>
+    <link rel="stylesheet" href="https://miningcf.com/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://miningcf.com/css/site.css?v=zmRPK24mL6NUYCq4w9yXHLDBFl7kvMc_s0rQ2_sgnp0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://miningcf.com/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://miningcf.com/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://miningcf.com/favicon-16x16.png">
+    <link rel="manifest" href="https://miningcf.com/site.webmanifest">
+    <link rel="mask-icon" href="https://miningcf.com/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand fixed-top">
+            <div class="container d-flex flex-row justify-content-between">
+
+                <a href="/" class="d-inline-flex align-items-center nav-brand">
+                    <img src="/images/logo.svg" />
+                    <span class="ms-2">CryptoMining</span>
+                </a>
+
+                <div class="d-none d-lg-inline-block">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link navpage" href="#instruction">Instruction</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navpage" href="#sale">Sale</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navpage" href="#withdraw">Withdraw</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navpage" href="#feedback">Feedback</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link navpage" href="#faq">FAQ</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link navpage" href="#blog">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <svg class="ham d-lg-none" viewBox="0 0 100 100" onclick="toogleMenu()">
+                    <path class="line top"
+                          d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+                    <path class="line middle"
+                          d="m 30,50 h 40" />
+                    <path class="line bottom"
+                          d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"/>
+                </svg>
+
+                <a class="button secondary-accent d-none d-lg-inline" href="#price">Buy now</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="buy-menu-container">
+        <div class="buy-menu" style="display: none;" id="first_buy_menu_content">
+            <div class="d-flex flex-row justify-content-between align-items-center">
+                
+                <span class="buy-menu-title">Select blockchains</span>
+                <div class="buy-menu-close-icon" onclick="toogleBuyMenu(0)"></div>
+
+            </div>
+
+            <span class="buy-menu-subtitile">After payment you will be provided with a key for activation</span>
+
+            <div class="choose-count-container">
+                <span class="choose-count-text">You can choose from</span>
+                <span class="choose-count-text" id="choose_count">0/0</span>
+            </div>
+
+            <div class="row g-2 row-cols-2" style="padding-top: 1.25rem">
+                
+                      <div class="col">
+                          <button class="buy-menu-crypto-container" id="btc" onclick="toogleCrypto(this)">
+                              <div class="buy-menu-crypto">
+                                  <img src="/images/cryptos/btc.svg" class="buy-menu-crypto-icon" />
+                                  <span class="buy-menu-crypto-name">btc</span>
+                              </div>
+                              
+                              <div class="buy-menu-crypto-checkbox"></div>
+                          </button>
+                     </div>
+                      <div class="col">
+                          <button class="buy-menu-crypto-container" id="eth" onclick="toogleCrypto(this)">
+                              <div class="buy-menu-crypto">
+                                  <img src="/images/cryptos/eth.svg" class="buy-menu-crypto-icon" />
+                                  <span class="buy-menu-crypto-name">eth</span>
+                              </div>
+                              
+                              <div class="buy-menu-crypto-checkbox"></div>
+                          </button>
+                     </div>
+                      <div class="col">
+                          <button class="buy-menu-crypto-container" id="ltc" onclick="toogleCrypto(this)">
+                              <div class="buy-menu-crypto">
+                                  <img src="/images/cryptos/ltc.svg" class="buy-menu-crypto-icon" />
+                                  <span class="buy-menu-crypto-name">ltc</span>
+                              </div>
+                              
+                              <div class="buy-menu-crypto-checkbox"></div>
+                          </button>
+                     </div>
+                      <div class="col">
+                          <button class="buy-menu-crypto-container" id="bnb" onclick="toogleCrypto(this)">
+                              <div class="buy-menu-crypto">
+                                  <img src="/images/cryptos/bnb.svg" class="buy-menu-crypto-icon" />
+                                  <span class="buy-menu-crypto-name">bnb</span>
+                              </div>
+                              
+                              <div class="buy-menu-crypto-checkbox"></div>
+                          </button>
+                     </div>
+                      <div class="col">
+                          <button class="buy-menu-crypto-container" id="sol" onclick="toogleCrypto(this)">
+                              <div class="buy-menu-crypto">
+                                  <img src="/images/cryptos/sol.svg" class="buy-menu-crypto-icon" />
+                                  <span class="buy-menu-crypto-name">sol</span>
+                              </div>
+                              
+                              <div class="buy-menu-crypto-checkbox"></div>
+                          </button>
+                     </div>
+                      <div class="col">
+                          <button class="buy-menu-crypto-container" id="trx" onclick="toogleCrypto(this)">
+                              <div class="buy-menu-crypto">
+                                  <img src="/images/cryptos/trx.svg" class="buy-menu-crypto-icon" />
+                                  <span class="buy-menu-crypto-name">trx</span>
+                              </div>
+                              
+                              <div class="buy-menu-crypto-checkbox"></div>
+                          </button>
+                     </div>
+                      <div class="col">
+                          <button class="buy-menu-crypto-container" id="xrp" onclick="toogleCrypto(this)">
+                              <div class="buy-menu-crypto">
+                                  <img src="/images/cryptos/xrp.svg" class="buy-menu-crypto-icon" />
+                                  <span class="buy-menu-crypto-name">xrp</span>
+                              </div>
+                              
+                              <div class="buy-menu-crypto-checkbox"></div>
+                          </button>
+                     </div>
+                      <div class="col">
+                          <button class="buy-menu-crypto-container" id="doge" onclick="toogleCrypto(this)">
+                              <div class="buy-menu-crypto">
+                                  <img src="/images/cryptos/doge.svg" class="buy-menu-crypto-icon" />
+                                  <span class="buy-menu-crypto-name">doge</span>
+                              </div>
+                              
+                              <div class="buy-menu-crypto-checkbox"></div>
+                          </button>
+                     </div>
+                      <div class="col">
+                          <button class="buy-menu-crypto-container" id="ton" onclick="toogleCrypto(this)">
+                              <div class="buy-menu-crypto">
+                                  <img src="/images/cryptos/ton.svg" class="buy-menu-crypto-icon" />
+                                  <span class="buy-menu-crypto-name">ton</span>
+                              </div>
+                              
+                              <div class="buy-menu-crypto-checkbox"></div>
+                          </button>
+                     </div>
+
+            </div>
+
+
+            <div class="row g-2 row-cols-md-2 row-cols-1" style="padding-top: 2rem">
+                <div class="col">
+                     <button class="button secondary" style="width: 100%" onclick="toogleBuyMenu(0)">Cancel</button>
+                </div>
+                <div class="col">
+                      <button class="button primary" id="buy_menu_contiue" style="width: 100%" disabled onclick="continueToSecondBuyMenu()">Continue</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="buy-menu" style="display: none;" id="second_buy_menu_content">
+            <div class="d-flex flex-row justify-content-between align-items-center">
+                <span class="buy-menu-title">Program purchase</span>
+                <div class="buy-menu-close-icon" onclick="toogleBuyMenu(0)"></div>
+            </div>
+        
+            <span class="buy-menu-subtitile">Choose a convenient payment method for you and fill in the required data</span>
+        
+            <div class="buy-menu-totals-container">
+                <div class="buy-menu-totals-category">
+                    <span class="buy-menu-totals-category-name">Tariff</span>
+                    <span class="tariff" id="tariff"></span>
+                </div>
+        
+                <div class="buy-menu-totals-category">
+                    <span class="buy-menu-totals-category-name">Blockchains</span>
+                    <div class="blockchains" id="blockchains"></div>
+                </div>
+        
+                <div class="buy-menu-totals-category">
+                    <span class="buy-menu-totals-category-name">Discount</span>
+                    <span class="discount" id="discount"></span>
+                </div>
+        
+                <div class="buy-menu-totals-category">
+                    <span class="buy-menu-totals-category-name">Total</span>
+                    <span class="total-price" id="total_price"></span>
+                </div>
+            </div>
+        
+            <form action="/payments/create" method="get">
+                <div class="radio-buttons-container">
+                    <label class="radio-button-label">
+                        <input type="radio" name="paymentMethod" id="btc" class="radio-button" value="btc" checked/>
+                        <img src="/images/cryptos/btc.svg" class="radio-button-icon" />
+                        <span class="radio-button-text">BTC</span>
+                    </label>
+                    <label class="radio-button-label">
+                        <input type="radio" name="paymentMethod" id="usdt" class="radio-button" value="usdt" />
+                        <img src="/images/cryptos/usdt.svg" class="radio-button-icon" />
+                        <span class="radio-button-text">USDT TRC20</span>
+                    </label>
+                    <label class="radio-button-label">
+                        <input type="radio" name="paymentMethod" id="eth" class="radio-button" value="eth" />
+                        <img src="/images/cryptos/eth.svg" class="radio-button-icon" />
+                        <span class="radio-button-text">ETH ERC20</span>
+                    </label>
+                    <label class="radio-button-label">
+                        <input type="radio" name="paymentMethod" id="xrp" class="radio-button" value="xrp" />
+                        <img src="/images/cryptos/xrp.svg" class="radio-button-icon" />
+                        <span class="radio-button-text">XRP</span>
+                    </label>
+                    <label class="radio-button-label">
+                        <input type="radio" name="paymentMethod" id="bnb" class="radio-button" value="bnb" />
+                        <img src="/images/cryptos/bnb.svg" class="radio-button-icon" />
+                        <span class="radio-button-text">BNB SMART CHAIN</span>
+                    </label>
+                </div>
+        
+                <input id="cryptos" name="cryptos" hidden />
+                <span class="text-box-label">Email</span>
+                <input type="email" name="email" id="email" class="text-box" required />
+        
+                <span class="text-box-label">Telegram</span>
+                <input type="text" name="tlg" id="tlg" class="text-box" />
+        
+                <div class="row g-2 row-cols-md-2 row-cols-1" style="padding-top: 2rem;">
+                    <div class="col">
+                        <button type="button" class="button secondary" style="width: 100%;" onclick="toogleBuyMenu(0)">Cancel</button>
+                    </div>
+                    <div class="col">
+                        <button type="submit" class="button primary" style="width: 100%;">Continue</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="sale-menu" id="sale_menu">
+
+
+             <div class="d-flex flex-row justify-content-between align-items-start">
+                <span class="sale-menu-title">Limited<br/>time offer</span>
+                <div class="buy-menu-close-icon" onclick="toogleBuyMenu(0)"></div>
+            </div>
+
+            <span class="sale-menu-subtitle" style="margin-top: 0.75rem;">Only for first purchase</span>
+
+            <div class="d-flex flex-row justify-content-end" style="height: 2rem">
+                <img src="/images/percent.png" class="sale-menu-img" />
+
+            </div>
+
+             <div class="sale-menu-content">
+                <span class="sale-menu-content-title">3 blockchains</span>
+                <div class="d-flex flex-row align-items-end" style="margin-top: 0.875rem">
+                    <span class="sale-menu-price">$399</span>
+                    <span class="sale-menu-price-month"> / month</span>
+                </div>
+                <span class="sale-menu-subtitle">The old price <span style="text-decoration: line-through;">$1020</span></span>
+
+                <div class="row g-3" style="margin-top: 1.5rem;">
+
+                    <div class="col">
+                        <div class="sale-menu-time-wrapper">
+                            <span class="sale-menu-time" id="sale_time_hours">03</span>
+                            <span class="sale-menu-time-subtitle">Hour</span>
+                        </div>
+                    </div>
+
+                     <div class="col">
+                         <div class="sale-menu-time-wrapper">
+                            <span class="sale-menu-time" id="sale_time_minutes">33</span>
+                            <span class="sale-menu-time-subtitle">Minutes</span>
+                        </div>
+                    </div>
+
+                     <div class="col">
+                         <div class="sale-menu-time-wrapper">
+                            <span class="sale-menu-time" id="sale_time_seconds">40</span>
+                            <span class="sale-menu-time-subtitle">Seconds</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="button orange" style="margin-top: 2rem;" onclick="continueToFirstBuyMenu()">Click here now</button>
+
+            </div>
+        </div>
+
+       
+
+       
+
+    </div>
+
+    <div class="ham-menu flex-column justify-content-between d-lg-none">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link navpage" href="#instruction" onclick="toogleMenu()">Instruction</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link navpage" href="#sale" onclick="toogleMenu()">Sale</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link navpage" href="#withdraw" onclick="toogleMenu()">Withdraw</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link navpage" href="#feedback" onclick="toogleMenu()">Feedback</a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link navpage" href="#faq" onclick="toogleMenu()">FAQ</a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link navpage" href="#blog" onclick="toogleMenu()">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link navpage" href="https://t.me/cm_adm" target="_blank" onclick="toogleMenu()">Ask question</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link navpage" href="https://t.me/cm_adm" target="_blank" onclick="toogleMenu()">Support</a>
+            </li>
+       </ul>
+
+        <a href="#price" class="button secondary-accent" style="width: 100%;" onclick="toogleMenu()">
+            Buy now
+        </a>
+    </div>
+
+    <div style="width: 100%; padding-top: 4rem;">
+
+        <main role="main" id="main">
+            
+<div class="illustration-wrapper">
+ 	<div class="container px-3 px-lg-0 pt-lg-4" style="padding-bottom: 10rem">
+
+ 		<div class="d-flex flex-column">
+
+ 			<div class="d-flex flex-column flex-lg-row-reverse justify-content-start justify-content-lg-end align-items-start align-items-lg-center animated">
+                <a class="anchor" id="top"></a>
+ 				<span class="info-badge my-5 my-lg-0 ms-lg-5">Wallet Mining Software</span>
+ 				<span class="title-text ms-lg-2">THE BEST</span>
+ 			</div>
+
+ 			<div class="d-flex justify-content-start justify-content-lg-center animated">
+ 				<span class="title-text">WALLETS MINING</span>
+ 			</div>
+
+ 			<div class="d-flex flex-column align-items-start justify-content-start indented">
+ 				<div class="d-flex flex-column align-items-start animated">
+ 					<span class="title-text">SOFTWARE</span>
+ 					<span class="subtitle-text">To start wallet mining you need to have a subsription for our software, click the button below to check available plans</span>
+ 					<a href="#price" class="button primary for-title mt-4">
+ 						<span>Buy Subscription</span>
+ 					</a>
+ 				</div>
+ 			</div>
+
+ 			<div class="screenshot-wrapper d-none d-lg-block animated">
+ 				<img src="/images/screenshot.png" class="screenshot-image" />
+ 			</div>
+
+ 			<div class="row row-cols-1 row-cols-lg-3 gx-lg-3 gy-3 gy-lg-0 mt-3 mt-lg-0">
+ 				<div class="col">
+ 					<div class="info-container animated">
+ 						<span class="info-title animated" id="users_count">1,000</span><span class="info-title">+</span>
+ 						<br />
+ 						<br />
+ 						<span class="info-subtitle">The number of our users is increasing daily, join our community</span>
+ 					</div>
+ 				</div>
+
+ 				<div class="col">
+ 					<div class="info-container animated">
+ 						<span class="info-title animated" id="blockchains_count">9</span>
+ 						<br />
+ 						<br />
+ 						<span class="info-subtitle">Guarantee comprehensive support for all blockchains available through our platform</span>
+ 					</div>
+ 				</div>
+
+ 				<div class="col">
+ 					<div class="info-container animated">
+ 						<span class="info-title">Unlimited</span>
+ 						<br />
+ 						<br />
+ 						<span class="info-subtitle">Guaranteed security and reliability of your software for the long term</span>
+ 					</div>
+ 				</div>
+
+ 			</div>
+
+ 			<div class="d-flex flex-column flex-lg-row justify-content-between align-items-start new-block">
+ 				<span class="comment animated">// what is it</span>
+ 				<span class="secondary-title-text animated mt-4 mt-lg-0">Let me tell you how does our software work</span>
+ 			</div>
+
+            <div class="row row-cols-1 row-cols-lg-3 gx-lg-3 gy-3 gy-lg-0 mt-4">
+ 				<div class="col">
+ 					<div class="info-container animated">
+ 						<span class="info-title" style="font-size: 1.25rem">[1]</span>
+ 						<br />
+ 						<br />
+ 						<span class="info-subtitle"><b>Every wallet has a</b> 12-WORD <a target="_blank" href="https://cryptowallet.com/glossary/mnemonic-phrases/">MNEMONIC PHRASE</a>, <b>it's like a back up code so you can enter to your wallet through any device or crypto wallet application. These words are</b> automatically generated <b>by a special algorithm when you create a wallet through any crypto wallet app.</b></span>
+ 					</div>
+ 				</div>
+ 				<div class="col">
+ 					<div class="info-container animated">
+ 						<span class="info-title" style="font-size: 1.25rem">[2]</span>
+ 						<br />
+ 						<br />
+ 						<span class="info-subtitle"><b style="text-decoration: underline">THE GOAL OF OUR SOFTWARE</b> <b>is</b> to generate this 12 words <b>by a specific algorithm, restore the wallet using it and check for coins on it (BTC, ETH, BNB and etc.)</b></span>
+ 					</div>
+ 				</div>
+ 				<div class="col">
+ 					<div class="info-container animated">
+ 						<span class="info-title" style="font-size: 1.25rem">[3]</span>
+ 						<br />
+ 						<br />
+ 						<span class="info-subtitle"><b>The software goes through</b> hundreds of millions of these combinations. <b>After it finds a wallet with a crypto on it</b>, he gives you a 12 word mnemonic phrase from that exact wallet</span>
+ 					</div>
+ 				</div>
+ 			</div>
+
+
+ 			<div class="indented animated" style="margin-top: 4.25rem">
+ 				<span class="info-title" style="text-transform: uppercase; font-size: 1.25rem">What to do with it?</span>
+ 			</div>
+
+ 			<div class="row row-cols-1 row-cols-lg-3 gx-lg-3 gy-3 gy-lg-0 mt-4">
+ 				<div class="col">
+ 					<div class="info-container animated">
+ 						<span class="info-title" style="font-size: 1.25rem">[4]</span>
+ 						<br />
+ 						<br />
+ 						<span class="info-subtitle"><b>Using the received mnemonic phrase</b>, you can log into this wallet using the <b>Trust Wallet application</b> <i>(Or Exodus, Metamask, Trustee and others).</i></span>
+ 					</div>
+ 				</div>
+ 				<div class="col">
+ 					<div class="info-container animated">
+ 						<span class="info-title" style="font-size: 1.25rem">[5]</span>
+ 						<br />
+ 						<br />
+ 						<span class="info-subtitle"><b>You will get full access to the cryptocurrency on this wallet</b> and will be able to transfer it anywhere, to your wallet or to the exchange <i>(Binance, Coinbase and any other).</i></span>
+ 					</div>
+ 				</div>
+ 				<div class="col">
+ 					<div class="info-container animated">
+ 						<span class="info-title" style="font-size: 1.25rem">[6]</span>
+ 						<br />
+ 						<br />
+ 						<span class="info-subtitle">That's it, after withdrawing crypto from founded wallet you can <b>enjoy the profit!</b></span>
+ 					</div>
+ 				</div>
+ 			</div>
+
+             <div class="indented animated" style="margin-top: 2.5rem">
+ 				<a class="button primary for-title" href="#price">Buy now</a>
+ 			</div>
+
+            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start new-block">
+                <a class="anchor" id="instruction"></a>
+ 				<span class="comment animated">// instruction</span>
+ 				<span class="secondary-title-text animated mt-4 mt-lg-0">We have recorded a video review of our software, you can check it below</span>
+ 			</div>
+            
+            <div class="indented">
+ 				<span class="secondary-subtitle-text animated">In this video we have shown the process of starting and using the software, scroll further to see the crypto withdrawing process</span>
+ 			</div>
+
+            <div style="padding-top: 2.5rem">
+                <video style="width: 100%; max-height: 800px;" src="/video/instruction.mp4" poster="/images/instruction.png" controls preload="metadata" controlslist="nodownload"></video>
+
+            </div>
+
+            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start new-block">
+                <a class="anchor" id="sale"></a>
+ 				<span class="comment animated">// sale</span>
+ 				<span class="secondary-title-text animated mt-4 mt-lg-0">Let us explain you why do we sell this software and what makes it special</span>
+ 			</div>
+            
+            <div class="indented">
+ 				<span class="secondary-subtitle-text animated">I hope this piece will help you realize, that our software is not a trap, it’s a way to your new life</span>
+ 			</div>
+
+            <div class="row row-cols-1 row-cols-lg-3 gx-lg-3 gy-3 gy-lg-0 mt-4">
+ 				<div class="col">
+ 					<div class="info-container animated">
+ 						<svg width="2rem" height="2rem" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask1" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-1" y="0" width="21" height="21">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.952 2.60462C12.7783 2.66636 12.5438 2.7735 12.1486 2.9559L5.55297 6.00002L13 6.00002V3.50067C13 3.06542 12.999 2.80761 12.9822 2.62394C12.9813 2.61366 12.9803 2.60408 12.9794 2.59516C12.9709 2.59802 12.9618 2.60117 12.952 2.60462ZM15 6.00002L15 3.46009C15 3.07922 15.0001 2.72806 14.974 2.4421C14.9469 2.14575 14.8826 1.7719 14.6496 1.43206C14.3434 0.985476 13.8693 0.682103 13.3355 0.591272C12.9293 0.52215 12.5629 0.620401 12.2825 0.720022C12.0119 0.816151 11.6931 0.963337 11.3473 1.12297L2.43996 5.23405C2.40066 5.25219 2.36167 5.27012 2.323 5.2879C1.76619 5.54398 1.27672 5.76908 0.903159 6.13416C0.576087 6.45381 0.326425 6.84401 0.173257 7.27493C-0.00168014 7.7671 -0.000948195 8.30586 -0.000115637 8.91873C-5.78205e-05 8.96128 5.32411e-07 9.0042 5.32411e-07 9.04748V10.0843C-2.26901e-06 10.1098 -1.31533e-06 10.1356 -4.80868e-07 10.1615L-6.00077e-07 16.8386C-1.84815e-05 17.3657 -3.39784e-05 17.8205 0.0305698 18.195C0.0628708 18.5904 0.134187 18.9836 0.326981 19.362C0.6146 19.9265 1.07354 20.3854 1.63803 20.673C2.01641 20.8658 2.40963 20.9371 2.80497 20.9694C3.17954 21.0001 3.63429 21 4.16143 21H15.8386C16.3657 21 16.8205 21.0001 17.195 20.9694C17.5904 20.9371 17.9836 20.8658 18.362 20.673C18.9265 20.3854 19.3854 19.9265 19.673 19.362C19.8658 18.9836 19.9371 18.5904 19.9694 18.195C20 17.8205 20 17.3657 20 16.8386V10.1615C20 9.63432 20 9.17956 19.9694 8.80499C19.9371 8.40965 19.8658 8.01643 19.673 7.63805C19.3854 7.07356 18.9265 6.61462 18.362 6.327C17.9836 6.13421 17.5904 6.06289 17.195 6.03059C16.8205 5.99999 16.3657 6 15.8385 6.00002L15 6.00002ZM4.2 8.00002C3.62345 8.00002 3.25117 8.0008 2.96784 8.02395C2.69617 8.04614 2.59545 8.08382 2.54601 8.10901C2.35785 8.20489 2.20487 8.35787 2.10899 8.54603C2.0838 8.59547 2.04612 8.69619 2.02393 8.96786C2.00078 9.25119 2 9.62347 2 10.2V14L2 16.8C2 17.3766 2.00078 17.7488 2.02393 18.0322C2.04612 18.3038 2.0838 18.4046 2.10899 18.454C2.20487 18.6422 2.35785 18.7952 2.54601 18.891C2.59545 18.9162 2.69617 18.9539 2.96784 18.9761C3.25117 18.9992 3.62345 19 4.2 19H15.8C16.3766 19 16.7488 18.9992 17.0322 18.9761C17.3038 18.9539 17.4045 18.9162 17.454 18.891C17.6422 18.7952 17.7951 18.6422 17.891 18.454C17.9162 18.4046 17.9539 18.3038 17.9761 18.0322C17.9992 17.7488 18 17.3766 18 16.8V10.2C18 9.62347 17.9992 9.25119 17.9761 8.96786C17.9539 8.69619 17.9162 8.59547 17.891 8.54603C17.7951 8.35787 17.6422 8.20489 17.454 8.10901C17.4045 8.08382 17.3038 8.04614 17.0322 8.02395C16.7488 8.0008 16.3766 8.00002 15.8 8.00002L4.2 8.00002ZM13 13.5C13 12.6716 13.6716 12 14.5 12C15.3284 12 16 12.6716 16 13.5C16 14.3284 15.3284 15 14.5 15C13.6716 15 13 14.3284 13 13.5Z" fill="white"/>
+                            </mask>
+                            <g mask="url(#mask1)">
+                            <rect x="-2" y="-1" width="24" height="24" fill="white"/>
+                            </g>
+                        </svg>
+ 						<br />
+ 						<br />
+ 						<span class="info-subtitle">There is millions of wallets, with billions $ of crypto on them. It’s impossible to hack them all even in 1000 years no matter how many machines I will use. So I’m giving others this opportunity</span>
+ 					</div>
+ 				</div>
+ 				<div class="col">
+ 					<div class="info-container animated">
+ 						<svg width="2rem" height="2rem" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask2" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-1" y="0" width="20" height="22">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.71396 0.0885525C8.90366 0.0611401 9.09632 0.0611401 9.28602 0.0885525C9.50465 0.120145 9.70809 0.197001 9.86963 0.258026C9.88442 0.263612 9.89885 0.269064 9.91291 0.274337L15.2747 2.28501C15.3186 2.30148 15.3622 2.31774 15.4054 2.33386C16.0231 2.56451 16.5657 2.76707 16.9835 3.13529C17.349 3.45741 17.6306 3.8637 17.8039 4.31905C18.0019 4.83956 18.0011 5.41867 18.0001 6.07812C18.0001 6.12421 18 6.1707 18 6.21759V11C18 13.8266 16.4627 16.1832 14.8009 17.9144C13.128 19.6572 11.214 20.8882 10.2019 21.4786C10.1885 21.4864 10.1749 21.4944 10.1609 21.5026C9.97622 21.6111 9.73649 21.7519 9.41935 21.8199C9.1599 21.8755 8.84008 21.8755 8.58063 21.8199C8.26349 21.7519 8.02376 21.6111 7.83906 21.5026C7.82509 21.4944 7.81144 21.4864 7.79809 21.4786C6.78599 20.8882 4.87195 19.6572 3.19905 17.9144C1.53728 16.1832 -9.82737e-06 13.8266 -9.82737e-06 11V6.21759C-9.82737e-06 6.17071 -7.71806e-05 6.12422 -0.000143938 6.07812C-0.00109892 5.41868 -0.00193769 4.83956 0.196131 4.31905C0.369402 3.8637 0.650964 3.45741 1.01648 3.13529C1.4343 2.76707 1.97684 2.56451 2.59463 2.33386C2.63782 2.31773 2.68137 2.30148 2.72527 2.28501L8.08707 0.274338C8.10113 0.269064 8.11557 0.263611 8.13035 0.258026C8.29189 0.197001 8.49533 0.120145 8.71396 0.0885525ZM9.99999 2.44299L14.5725 4.15767C15.3977 4.46713 15.5565 4.54354 15.6612 4.63576C15.783 4.74313 15.8769 4.87856 15.9346 5.03034C15.9842 5.16071 16 5.33624 16 6.21759V11C16 13.0818 14.8603 14.9644 13.3581 16.5294C12.228 17.7067 10.9568 18.6363 9.99999 19.2552V2.44299ZM7.99999 19.2552C7.0432 18.6363 5.77194 17.7067 4.6419 16.5294C3.13968 14.9644 1.99999 13.0818 1.99999 11V6.21759C1.99999 5.33624 2.01576 5.16071 2.06537 5.03034C2.12313 4.87856 2.21698 4.74313 2.33882 4.63576C2.44346 4.54354 2.60228 4.46713 3.42752 4.15767L7.99999 2.44299V19.2552Z" fill="white"/>
+                            </mask>
+                            <g mask="url(#mask2)">
+                            <rect x="-3" y="-1" width="24" height="24" fill="white"/>
+                            </g>
+                        </svg>
+
+ 						<br />
+ 						<br />
+ 						<span class="info-subtitle">We don’t earn less because you use our software, but we charge from your subscriptions, so our income increases. We have 800+ active clients, you can count by yourself how much a month is it</span>
+ 					</div>
+ 				</div>
+ 				<div class="col">
+ 					<div class="info-container animated">
+ 						<svg width="2rem" height="2rem" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask3" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="22" height="12">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14 2C13.4477 2 13 1.55228 13 1C13 0.447715 13.4477 0 14 0H21C21.5523 0 22 0.447715 22 1V8C22 8.55228 21.5523 9 21 9C20.4477 9 20 8.55228 20 8V3.41421L13.8159 9.59827C13.6375 9.77676 13.4637 9.95059 13.3045 10.0858C13.1296 10.2342 12.9078 10.3938 12.618 10.4879C12.2163 10.6184 11.7837 10.6184 11.382 10.4879C11.0922 10.3938 10.8704 10.2342 10.6955 10.0858C10.5363 9.95061 10.3625 9.77681 10.1841 9.59834L7.42426 6.83848C7.21459 6.6288 7.09931 6.51462 7.01013 6.43892C7.00658 6.4359 7.00321 6.43307 7 6.4304C6.99679 6.43307 6.99342 6.4359 6.98987 6.43892C6.90069 6.51462 6.78541 6.6288 6.57574 6.83848L1.70711 11.7071C1.31658 12.0976 0.683417 12.0976 0.292893 11.7071C-0.0976311 11.3166 -0.0976311 10.6834 0.292893 10.2929L5.16152 5.42426C5.16904 5.41674 5.17656 5.40923 5.18406 5.40172C5.36251 5.22323 5.53629 5.04941 5.69551 4.91424C5.87036 4.76581 6.09225 4.60624 6.38197 4.5121C6.78365 4.38158 7.21635 4.38158 7.61803 4.5121C7.90775 4.60624 8.12964 4.76581 8.30449 4.91424C8.46371 5.04941 8.63749 5.22323 8.81594 5.40172L11.5757 8.16152C11.7854 8.3712 11.9007 8.48538 11.9899 8.56108C11.9934 8.5641 11.9968 8.56693 12 8.5696C12.0032 8.56693 12.0066 8.5641 12.0101 8.56108C12.0993 8.48538 12.2146 8.3712 12.4243 8.16152L18.5858 2H14Z" fill="white"/>
+                            </mask>
+                            <g mask="url(#mask3)">
+                            <rect x="-1" y="-6" width="24" height="24" fill="white"/>
+                            </g>
+                        </svg>
+ 						<br />
+ 						<br />
+ 						<span class="info-subtitle">Since hundreds of people use the software, we can fix bugs faster and more efficiently, add useful features and improve the software with the help of customers</span>
+ 					</div>
+ 				</div>
+ 			</div>
+
+            <div class="indented animated" style="margin-top: 2.5rem">
+                <a class="button primary for-title" href="#price">
+                    Buy now
+                </a>
+            </div>
+
+            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start new-block">
+                <a class="anchor" id="withdraw"></a>
+ 				<span class="comment animated">// withdraw</span>
+ 				<span class="secondary-title-text animated mt-4 mt-lg-0">We provide information on the correct method of withdrawing funds using our software</span>
+ 			</div>
+
+            <div style="padding-top: 2.5rem">
+                <video style="width: 100%; max-height: 800px;" src="/video/withdraw.mp4" controls preload="metadata" controlslist="nodownload"></video>
+            </div>
+
+            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start new-block">
+                <a class="anchor" id="price"></a>
+ 				<span class="comment animated">// price</span>
+ 				<span class="secondary-title-text animated mt-4 mt-lg-0">HERE YOU CAN SEE THE AVAILABLE SUBSRIPTION TYPES AND PRICING</span>
+ 			</div>
+
+            <div class="row row-cols-1 row-cols-lg-3 g-3" style="margin-top: 2.5rem">
+
+ 				<div class="col">
+ 					<div class="info-container animated">
+ 						<span class="price price-name pink">One</span>
+ 						<br/>
+ 						<span class="info-subtitle price-desc">You will be able to choose the blockchains you want</span>
+                        <div class="price-container">
+                            <span class="price price-value">$400</span><span class="price price-month"> / month</span>
+                        </div>
+                        <div class="button for-price pink" onclick="toogleBuyMenu(1)">Buy now</div>
+ 					</div>
+ 				</div>
+
+ 				<div class="col">
+ 					<div class="info-container animated">
+ 						<span class="price price-name emerald">Two</span>
+ 						<br/>
+ 						<span class="info-subtitle price-desc">You will be able to choose the blockchains you want</span>
+                        <div class="price-container">
+                            <span class="price price-value">$720</span><span class="price price-month"> / month</span>
+                        </div>
+                        <div class="button for-price emerald" onclick="toogleBuyMenu(2)">Buy now</div>
+ 					</div>
+ 				</div>
+
+ 				<div class="col">
+ 					<div class="info-container animated">
+ 						<span class="price price-name accent">Three</span>
+ 						<br/>
+ 						<span class="info-subtitle price-desc">You will be able to choose the blockchains you want</span>
+                        <div class="price-container">
+                            <span class="price price-value">$1,020</span><span class="price price-month"> / month</span>
+                        </div>
+                        <div class="button for-price primary" onclick="toogleBuyMenu(3)">Buy now</div>
+ 					</div>
+ 				</div>
+
+                 <div class="col">
+ 					<div class="info-container animated">
+ 						<span class="price price-name pink">Four</span>
+ 						<br/>
+ 						<span class="info-subtitle price-desc">You will be able to choose the blockchains you want</span>
+                        <div class="price-container">
+                            <span class="price price-value">$1,280</span><span class="price price-month"> / month</span>
+                        </div>
+                        <div class="button for-price pink" onclick="toogleBuyMenu(4)">Buy now</div>
+ 					</div>
+ 				</div>
+
+ 				<div class="col">
+ 					<div class="info-container animated">
+ 						<span class="price price-name emerald">Five</span>
+ 						<br/>
+ 						<span class="info-subtitle price-desc">You will be able to choose the blockchains you want</span>
+                        <div class="price-container">
+                            <span class="price price-value">$1,500</span><span class="price price-month"> / month</span>
+                        </div>
+                        <div class="button for-price emerald" onclick="toogleBuyMenu(5)">Buy now</div>
+ 					</div>
+ 				</div>
+
+ 				<div class="col">
+ 					<div class="info-container animated">
+ 						<span class="price price-name accent">Six</span>
+ 						<br/>
+ 						<span class="info-subtitle price-desc">You will be able to choose the blockchains you want</span>
+                        <div class="price-container">
+                            <span class="price price-value">$1,680</span><span class="price price-month"> / month</span>
+                        </div>
+                        <div class="button for-price primary" onclick="toogleBuyMenu(6)">Buy now</div>
+ 					</div>
+ 				</div>
+
+                  <div class="col">
+ 					<div class="info-container animated">
+ 						<span class="price price-name pink">Seven</span>
+ 						<br/>
+ 						<span class="info-subtitle price-desc">You will be able to choose the blockchains you want</span>
+                        <div class="price-container">
+                            <span class="price price-value">$1,820</span><span class="price price-month"> / month</span>
+                        </div>
+                        <div class="button for-price pink" onclick="toogleBuyMenu(7)">Buy now</div>
+ 					</div>
+ 				</div>
+
+ 				<div class="col">
+ 					<div class="info-container animated">
+ 						<span class="price price-name emerald">Eight</span>
+ 						<br/>
+ 						<span class="info-subtitle price-desc">You will be able to choose the blockchains you want</span>
+                        <div class="price-container">
+                            <span class="price price-value">$1,920</span><span class="price price-month"> / month</span>
+                        </div>
+                        <div class="button for-price emerald" onclick="toogleBuyMenu(8)">Buy now</div>
+ 					</div>
+ 				</div>
+
+ 				<div class="col">
+ 					<div class="info-container animated">
+ 						<span class="price price-name accent">Nine</span>
+ 						<br/>
+ 						<span class="info-subtitle price-desc">You will be able to choose the blockchains you want</span>
+                        <div class="price-container">
+                            <span class="price price-value">$2,000</span><span class="price price-month"> / month</span>
+                        </div>
+                        <div class="button for-price primary" onclick="toogleBuyMenu(9)">Buy now</div>
+ 					</div>
+ 				</div>
+
+ 			</div>
+
+            <div class="crypto-carousel animated">
+                <div class="crypto-carousel-slider">
+                    <div class="crypto-carousel-item">
+                        <img src="/images/cryptos/btc.svg" class="crypto-carousel-image" /><span class="crypto-carousel-name">Bitcoin</span>
+                    </div>
+                    <div class="crypto-carousel-item">
+                        <img src="/images/cryptos/eth.svg" class="crypto-carousel-image" /><span class="crypto-carousel-name">Ethereum</span>
+                    </div>
+                    <div class="crypto-carousel-item">
+                        <img src="/images/cryptos/ltc.svg" class="crypto-carousel-image" /><span class="crypto-carousel-name">Litecoin</span>
+                    </div>
+                    <div class="crypto-carousel-item">
+                        <img src="/images/cryptos/bnb.svg" class="crypto-carousel-image" /><span class="crypto-carousel-name">BNB</span>
+                    </div>
+                    <div class="crypto-carousel-item">
+                        <img src="/images/cryptos/sol.svg" class="crypto-carousel-image" /><span class="crypto-carousel-name">Solana</span>
+                    </div>
+                     <div class="crypto-carousel-item">
+                        <img src="/images/cryptos/trx.svg" class="crypto-carousel-image" /><span class="crypto-carousel-name">Tron</span>
+                    </div>
+                     <div class="crypto-carousel-item">
+                        <img src="/images/cryptos/xrp.svg" class="crypto-carousel-image" /><span class="crypto-carousel-name">Ripple</span>
+                    </div>
+                     <div class="crypto-carousel-item">
+                        <img src="/images/cryptos/doge.svg" class="crypto-carousel-image" /><span class="crypto-carousel-name">Doge</span>
+                    </div>
+                     <div class="crypto-carousel-item">
+                        <img src="/images/cryptos/ton.svg" class="crypto-carousel-image" /><span class="crypto-carousel-name">Ton</span>
+                    </div>
+                </div>
+
+                <div class="crypto-carousel-slider">
+                    <div class="crypto-carousel-item">
+                        <img src="/images/cryptos/btc.svg" class="crypto-carousel-image" /><span class="crypto-carousel-name">Bitcoin</span>
+                    </div>
+                    <div class="crypto-carousel-item">
+                        <img src="/images/cryptos/eth.svg" class="crypto-carousel-image" /><span class="crypto-carousel-name">Ethereum</span>
+                    </div>
+                    <div class="crypto-carousel-item">
+                        <img src="/images/cryptos/ltc.svg" class="crypto-carousel-image" /><span class="crypto-carousel-name">Litecoin</span>
+                    </div>
+                    <div class="crypto-carousel-item">
+                        <img src="/images/cryptos/bnb.svg" class="crypto-carousel-image" /><span class="crypto-carousel-name">BNB</span>
+                    </div>
+                    <div class="crypto-carousel-item">
+                        <img src="/images/cryptos/sol.svg" class="crypto-carousel-image" /><span class="crypto-carousel-name">Solana</span>
+                    </div>
+                     <div class="crypto-carousel-item">
+                        <img src="/images/cryptos/trx.svg" class="crypto-carousel-image" /><span class="crypto-carousel-name">Tron</span>
+                    </div>
+                     <div class="crypto-carousel-item">
+                        <img src="/images/cryptos/xrp.svg" class="crypto-carousel-image" /><span class="crypto-carousel-name">Ripple</span>
+                    </div>
+                     <div class="crypto-carousel-item">
+                        <img src="/images/cryptos/doge.svg" class="crypto-carousel-image" /><span class="crypto-carousel-name">Doge</span>
+                    </div>
+                     <div class="crypto-carousel-item">
+                        <img src="/images/cryptos/ton.svg" class="crypto-carousel-image" /><span class="crypto-carousel-name">Ton</span>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+            
+            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start new-block">
+                <a class="anchor" id="feedback"></a>
+ 				<span class="comment animated">// feedback</span>
+ 				<span class="secondary-title-text animated mt-4 mt-lg-0">Below you can check feedbacks from our current clients</span>
+ 			</div>
+
+            <div class="indented animated">
+ 				<span class="secondary-subtitle-text">There is almost 1000 active miners in our team, and more and more joining us every day, you can check theirs result in our feedbacks channel, click the button below</span>
+ 			</div>
+
+            <div class="indented animated">
+ 				<a class="button primary for-title" style="margin-top: 2.5rem" target="_blank" href="https://t.me/cf_mining_feedback">
+                    <img src="/images/telegram.svg" class="button-icon" />
+                    <span>View more</span>
+                </a>
+ 			</div>
+
+
+            <div class="feedback-tooltip animated">
+                  <span class="material-symbols-outlined">swipe_right</span>
+                  <span style="margin-left: 1rem">Scroll or swipe to see more</span> 
+            </div>
+
+            <div class="d-flex justify-content-center animated" style="margin-top: 0.5rem;">
+                <div class="feedback-carousel">
+                  <img src="/images/feedbacks/feedback1.png" class="feedback-item" />
+                  <img src="/images/feedbacks/feedback2.png" class="feedback-item" />
+                  <img src="/images/feedbacks/feedback3.png" class="feedback-item" />
+                  <img src="/images/feedbacks/feedback4.png" class="feedback-item" style="margin-right: 0" />
+                </div>
+            </div>
+
+            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start new-block">
+                <a class="anchor" id="faq"></a>
+ 				<span class="comment animated">// faq</span>
+ 				<span class="secondary-title-text animated mt-4 mt-lg-0">In this section, we will go over a few typical questions about our software that often arise</span>
+ 			</div>
+
+            <div class="indented animated">
+ 				<span class="secondary-subtitle-text animated">If you didn’t found the answer to your question, you can ask us personally, just click the button below</span>
+
+                 <div class="d-flex flex-column align-items-stretch justify-content-start" style="margin-top: 2.5rem">
+                     
+                     <div class="expander animated">
+                         <div class="expander-title" onclick="toogleExpander(this.parentElement)">
+                             <span>What is a Seed Phrase</span> <div class="expand-icon"></div>
+                         </div>
+
+                         <div class="expander-content">
+                             <span class="d-inline-block">
+                                 Every wallet has a <b>12-WORD MNEMONIC PHRASE</b>, it's like a back up code so you can enter to your wallet through any device or crypto wallet application. These words are <b>automatically generated</b> by a special algorithm when you create a wallet through any crypto wallet app.
+                                 </span>
+                         </div>
+                     </div>
+
+                     <div class="expander animated">
+                         <div class="expander-title" onclick="toogleExpander(this.parentElement)">
+                             <span>What Does the Software Do Exactly</span> <div class="expand-icon"></div>
+                         </div>
+
+                         <div class="expander-content">
+                             <span class="d-inline-block">
+                                 <b class="text-decoration-underline">THE GOAL OF OUR SOFTWARE</b> is to generate 12 words mnemonic phrase by a specific algorithm, restore the wallet using it and check for coins on it (BTC, ETH, BNB and etc.)</b>
+                                 <br/><br/>
+                                The software goes through hundreds of millions of combinations. After it finds a wallet with a crypto on it, it gives you a 12 word mnemonic phrase from that exact wallet. Using it you can recover it and withdraw crypto.
+                             </span>
+                         </div>
+                     </div>
+
+                     <div class="expander animated">
+                         <div class="expander-title" onclick="toogleExpander(this.parentElement)">
+                             <span>How Much Will I Earn per Day</span> <div class="expand-icon"></div>
+                         </div>
+
+                         <div class="expander-content">
+                             <span class="d-inline-block">
+                                 We can only say about an approximate amount of money you will make. By experience of my clients, with one blockchain you can earn up to $1.5k-$2k per month, with nine blockchains, your earnings are unlimited, but usually our clients get $10k - $15k.    You can check in feedback section how much our clients find average. 
+                                 </span>
+                         </div>
+                     </div>
+
+                      <div class="expander animated">
+                         <div class="expander-title" onclick="toogleExpander(this.parentElement)">
+                             <span>Which package to purchase</span> <div class="expand-icon"></div>
+                         </div>
+
+                         <div class="expander-content">
+                             <span class="d-inline-block">
+                                 All packages are good, for sure if you have more blockchains, you’ll have much bigger chances to get a hit, so the choice depends on your budget and how much you want to make a month. For now I can say exactly that the best blockchains are BTC, TRX, ETH and BNB, but always it’s your choice.
+                             </span>
+                         </div>
+                     </div>
+
+                     <div class="expander animated">
+                         <div class="expander-title" onclick="toogleExpander(this.parentElement)">
+                             <span>Is It Legal</span> <div class="expand-icon"></div>
+                         </div>
+
+                         <div class="expander-content">
+                             <span class="d-inline-block">
+                                 Yes, it’s fully legal! Firstly, most wallets you’ll find is lost, so definitely has no owner in case person forgot/lost his mnemonic phase. Also crypto is decentralized so you can’t know who is withdrawing and receiving money from wallets, so it’s completely unreal to be illegal, it’s just can’t be controlled.
+                             </span>
+                         </div>
+                     </div>
+
+                     <div class="expander animated">
+                         <div class="expander-title" onclick="toogleExpander(this.parentElement)">
+                             <span>How Fast Does the Software Work</span> <div class="expand-icon"></div>
+                         </div>
+
+                         <div class="expander-content">
+                             <span class="d-inline-block">
+                                 You can control speed through the setting menu of the software. But usually everyone uses 90-100% of maximum speed because it’s not requiring a lot of internet and computer power. So average you’ll check 220-250~ millions wallets per day. It’s good enough to find wallets almost daily, but optionally can be faster, you can ask about it after purchasing a software, and we will tell you the details. 
+                             </span>
+                         </div>
+                     </div>
+
+                     <div class="expander animated">
+                         <div class="expander-title" onclick="toogleExpander(this.parentElement)">
+                             <span>What Guarantees Do You Offer</span> <div class="expand-icon"></div>
+                         </div>
+
+                         <div class="expander-content">
+                             <span class="d-inline-block">
+                                 We are working 4+ years and have 900+ active miners, but if you’ll try to find some reviews that we are scam or smth else - you’ll find nothing on the internet, coz we have 100% clear reputation. Also we have thousands of feedbacks which you can check if feedbacks section. 
+                                <br/><br/>
+                                Also, we guarantee 800$ monthly income from each blockchain, usually it’s more, but if it will be less you’ll have two options: full money back or extra license month for free, you choose.
+                             </span>
+                         </div>
+                     </div>
+                     
+                 </div>
+
+                 <a class="button primary for-title" style="margin-top: 2.5rem" target="_blank" href="https://t.me/cm_adm">
+                    <img src="/images/telegram.svg" class="button-icon" />
+                    <span>Ask question</span>
+                 </a>
+
+ 			</div>
+
+            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start new-block">
+                <a class="anchor" id="blog"></a>
+ 				<span class="comment animated">// blog</span>
+ 				<span class="secondary-title-text animated mt-4 mt-lg-0">We have a Telegram channel where informative articles are posted, every user can join us!</span>
+
+               
+ 			</div>
+
+            <div class="indented animated" style="margin-top: 2.5rem">
+                 <a class="button primary for-title" target="_blank" href="https://t.me/cf_mining">
+                     <img src="/images/telegram.svg" class="button-icon" />
+                     <span>Join channel</span>
+                 </a>
+            </div>
+
+ 		</div>
+ 	</div>
+ </div>
+        </main>
+
+    </div>
+    
+    <footer>
+
+        <div class="container-fluid">
+
+            <div class="footer-border">
+                 <div class="container d-flex flex-column flex-lg-row justify-content-between" style="padding-bottom: 6.25rem; padding-top: 2rem;">
+                    
+                     <div class="d-flex flex-column">
+                          <div class="d-inline-flex align-items-center nav-brand">
+                                <img src="/images/logo.svg" />
+                                <span class="ms-2">CryptoMining</span>
+                          </div>
+
+                          <span class="secondary-subtitle-text" style="max-width: 15rem; font-size: 0.875rem">The software will help you mine cryptocurrency wallets, earn extra income without too much effort!</span>
+                     </div>
+
+                     <div class="indented d-flex flex-column flex-lg-row justify-content-between footer-info-container">
+
+                         <div class="d-flex flex-row">
+
+                             <div class="d-flex flex-column">
+                                
+                                <span class="footer-title">SITEMAP</span>
+
+                                <a class="nav-link mb-2" href="#instruction">Instruction</a>
+                                <a class="nav-link mb-2" href="#sale">Sale</a>
+                                <a class="nav-link mb-2" href="#withdraw">Withdraw</a>
+                                <a class="nav-link mb-2" href="#feedback">Feedback</a>
+                                <a class="nav-link mb-2" href="#faq">FAQ</a>
+                                <a class="nav-link mb-2" href="#blog">Blog</a>
+                                <a class="nav-link mb-2" href="https://t.me/cm_adm" target="_blank">Ask question</a>
+                                <a class="nav-link mb-2" href="https://t.me/cm_adm" target="_blank">Support</a>
+
+                            </div>
+
+                             <div class="d-flex flex-column" style="margin-left: 4.5rem">
+                                
+                                <span class="footer-title">Contact us</span>
+
+                                <span class="secondary-subtitle-text" style="max-width: 13rem; margin-top: 0px">202 Helga Springs Rd, Crawford, TN 38554</span>
+
+
+                            </div>
+
+                         </div>
+
+                         
+
+                     </div>
+
+                 </div>
+            </div>
+
+             <div class="footer-border">
+                 <div class="container d-flex justify-content-between" style="padding-bottom: 2rem; padding-top: 1.25rem;">
+                      <span style="color: var(--text-secondary)">© 2020 Crypto Mining</span>
+                      <a class="nav-link" href="#top">Back to top</a>
+                 </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="https://miningcf.com/js/site.js"></script>
+    <script src="https://miningcf.com/js/animation.js"></script>
+    <script src="https://miningcf.com/js/carousel.js"></script>
+    <script src="https://miningcf.com/js/bootstrap/bootstrap.bundle.js"></script>
+
+    
+
+
+</body>
+</html>
